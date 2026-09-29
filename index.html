@@ -5,229 +5,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alok Kumar | Portfolio</title>
+    <meta name="description"
+        content="Alok Kumar - BCA Student and Web Developer Portfolio">
+    <meta name="author" content="Alok Kumar">
+
+    <title>Alok Kumar | Premium Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ================= ANIMATED BACKGROUND ================= -->
 
-    <header>
+    <div class="background-effects">
+        <span class="blob blob-one"></span>
+        <span class="blob blob-two"></span>
+        <span class="blob blob-three"></span>
+    </div>
 
-        <h2>Alok Kumar</h2>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+    <!-- ================= PREMIUM NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <!-- LEFT: NAME -->
+
+        <div class="nav-brand">
+            <a href="#home">Alok Kumar</a>
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-menu" id="nav-menu">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </nav>
+
+
+        <!-- DARK / LIGHT MODE -->
 
         <button
             id="theme-toggle"
             class="theme-toggle"
+            type="button"
             aria-label="Toggle dark and light mode">
+
             ☀️
+
         </button>
 
     </header>
 
 
-    <!-- ================= HOME ================= -->
+    <!-- ================= MAIN ================= -->
 
-    <section id="home">
-
-        <div class="profile-photo">
-            <img src="profile.jpg" alt="Alok Kumar">
-        </div>
-
-        <div class="home-content">
-
-            <p class="welcome">
-                WELCOME TO MY PORTFOLIO
-            </p>
-
-            <h1>
-                Hello, I'm <span>Alok Kumar</span>
-            </h1>
-
-            <h2>
-                BCA Student & Web Developer
-            </h2>
-
-            <p class="intro">
-                I am passionate about web development and creating
-                modern, responsive and user-friendly websites.
-            </p>
-
-            <div class="home-buttons">
-
-                <a href="#projects" class="btn primary-btn">
-                    View My Projects
-                </a>
-
-                <a href="#contact" class="btn secondary-btn">
-                    Contact Me
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
+    <main>
 
 
-    <!-- ================= ABOUT ================= -->
+        <!-- ================= HOME ================= -->
 
-    <section id="about">
+        <section id="home" class="hero reveal">
 
-        <p class="section-title">
-            ABOUT ME
-        </p>
+            <div class="hero-content">
 
-        <h2>
-            Who I Am
-        </h2>
-
-        <p>
-            I am a BCA student and aspiring Web Developer.
-            I am interested in website designing, web development
-            and software development.
-        </p>
-
-        <p>
-            I enjoy learning new technologies and building useful,
-            modern and user-friendly websites.
-        </p>
-
-        <div class="about-info">
-
-            <div>
-                <h3>Education</h3>
-                <p>
-                    Bachelor of Computer Applications (BCA)
-                </p>
-            </div>
-
-            <div>
-                <h3>Focus</h3>
-                <p>
-                    Web Development
-                </p>
-            </div>
-
-            <div>
-                <h3>Location</h3>
-                <p>
-                    Lucknow, Uttar Pradesh
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills">
-
-        <p class="section-title">
-            MY SKILLS
-        </p>
-
-        <h2>
-            Technologies I Work With
-        </h2>
-
-        <div class="skills-container">
-
-            <div class="skill-card">
-                <h3>HTML</h3>
-                <p>Web Structure</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>CSS</h3>
-                <p>Web Design</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-                <p>Web Interactivity</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Python</h3>
-                <p>Programming</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Java</h3>
-                <p>Programming</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>C</h3>
-                <p>Programming</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects">
-
-        <p class="section-title">
-            MY PROJECTS
-        </p>
-
-        <h2>
-            Projects I Have Built
-        </h2>
-
-        <div class="projects-container">
-
-
-            <!-- PROJECT 1 -->
-
-            <div class="project">
-
-                <h3>
-                    Student Management System
-                </h3>
-
-                <p>
-                    A system designed to manage student information
-                    and academic records.
+                <p class="welcome">
+                    <span></span>
+                    WELCOME TO MY PORTFOLIO
                 </p>
 
-                <span>
-                    Java • Database
-                </span>
 
-                <div class="project-buttons">
+                <h1>
+                    Hello, I'm
+                    <span class="gradient-text">
+                        Alok Kumar
+                    </span>
+                </h1>
+
+
+                <h2>
+                    BCA Student
+                    <span>&</span>
+                    Web Developer
+                </h2>
+
+
+                <p class="intro">
+                    I am passionate about web development and creating
+                    modern, responsive and user-friendly websites.
+                    I love turning ideas into beautiful digital experiences.
+                </p>
+
+
+                <!-- SOCIAL LINKS -->
+
+                <div class="social-links">
 
                     <a
-                        href="#"
-                        class="project-btn github-btn"
+                        href="https://github.com/alokkumarmaurya875623"
                         target="_blank"
-                        rel="noopener noreferrer">
-                        View Code
+                        rel="noopener noreferrer"
+                        aria-label="GitHub">
+
+                        <i class="fa-brands fa-github"></i>
+
                     </a>
 
+
                     <a
-                        href="#"
-                        class="project-btn demo-btn"
+                        href="https://www.linkedin.com/in/alok-kumar-alok-kumar-84584632b"
                         target="_blank"
-                        rel="noopener noreferrer">
-                        Live Demo
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a
+                        href="mailto:alokumar875623@gmail.com"
+                        aria-label="Email">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- HOME BUTTONS -->
+
+                <div class="home-buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn primary-btn">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        View Projects
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn secondary-btn">
+
+                        <i class="fa-regular fa-paper-plane"></i>
+
+                        Contact Me
+
                     </a>
 
                 </div>
@@ -235,39 +205,551 @@
             </div>
 
 
-            <!-- PROJECT 2 -->
+            <!-- PROFILE -->
 
-            <div class="project">
+            <div class="hero-photo">
 
-                <h3>
-                    Library Management System
-                </h3>
+                <div class="photo-ring">
 
-                <p>
-                    A project for managing books, students and
-                    library records efficiently.
+                    <div class="photo-glow"></div>
+
+                    <img
+                        src="profile.jpg"
+                        alt="Alok Kumar">
+
+                </div>
+
+
+                <div class="floating-card card-one">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    Web Developer
+
+                </div>
+
+
+                <div class="floating-card card-two">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    BCA Student
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section reveal">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    ABOUT ME
                 </p>
 
-                <span>
-                    Java • Database
-                </span>
+                <h2>
+                    Who <span>I Am</span>
+                </h2>
 
-                <div class="project-buttons">
+                <p>
+                    Get to know me and my journey.
+                </p>
 
-                    <a
-                        href="#"
-                        class="project-btn github-btn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Code
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="glass-card about-main">
+
+                    <h3>
+                        I'm Alok Kumar
+                    </h3>
+
+                    <p>
+                        I am a BCA student and aspiring Web Developer.
+                        I am interested in website designing, web development
+                        and software development.
+                    </p>
+
+                    <p>
+                        I enjoy learning new technologies and building useful,
+                        modern and user-friendly websites.
+                    </p>
+
+                    <p>
+                        My goal is to continuously improve my technical skills
+                        and create meaningful digital experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="about-info">
+
+
+                    <div class="info-card glass-card">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <h3>
+                            Education
+                        </h3>
+
+                        <p>
+                            Bachelor of Computer Applications (BCA)
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card glass-card">
+
+                        <i class="fa-solid fa-laptop-code"></i>
+
+                        <h3>
+                            Focus
+                        </h3>
+
+                        <p>
+                            Web Development
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card glass-card">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <h3>
+                            Location
+                        </h3>
+
+                        <p>
+                            Lucknow, Uttar Pradesh
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section reveal">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    MY SKILLS
+                </p>
+
+                <h2>
+                    Technologies I
+                    <span>Work With</span>
+                </h2>
+
+                <p>
+                    Technologies and programming languages
+                    I am learning and using.
+                </p>
+
+            </div>
+
+
+            <div class="skills-container">
+
+
+                <div class="skill-card glass-card">
+
+                    <i class="fa-brands fa-html5"></i>
+
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        Web Structure
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width:90%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card glass-card">
+
+                    <i class="fa-brands fa-css3-alt"></i>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        Web Design
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width:85%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card glass-card">
+
+                    <i class="fa-brands fa-js"></i>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Web Interactivity
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width:75%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card glass-card">
+
+                    <i class="fa-brands fa-python"></i>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Programming
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width:75%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card glass-card">
+
+                    <i class="fa-brands fa-java"></i>
+
+                    <h3>
+                        Java
+                    </h3>
+
+                    <p>
+                        Programming
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width:80%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-card glass-card">
+
+                    <i class="fa-solid fa-c"></i>
+
+                    <h3>
+                        C
+                    </h3>
+
+                    <p>
+                        Programming
+                    </p>
+
+                    <div class="skill-line">
+                        <span style="width:80%"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section reveal">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    MY PROJECTS
+                </p>
+
+                <h2>
+                    Projects I Have
+                    <span>Built</span>
+                </h2>
+
+                <p>
+                    Some of my academic and development projects.
+                </p>
+
+            </div>
+
+
+            <div class="projects-container">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card glass-card">
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <h3>
+                        Student Management System
+                    </h3>
+
+                    <p>
+                        A system designed to manage student information
+                        and academic records efficiently.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Java</span>
+                        <span>Database</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a href="#" class="project-btn">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            View Code
+
+                        </a>
+
+
+                        <a href="#" class="project-btn">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card glass-card">
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <h3>
+                        Library Management System
+                    </h3>
+
+                    <p>
+                        A project for managing books, students and
+                        library records efficiently.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Java</span>
+                        <span>Database</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a href="#" class="project-btn">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            View Code
+
+                        </a>
+
+
+                        <a href="#" class="project-btn">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card glass-card">
+
+                    <div class="project-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <h3>
+                        Personal Finance & Expense
+                        Intelligence System
+                    </h3>
+
+                    <p>
+                        A system for tracking personal expenses and
+                        understanding spending patterns.
+                    </p>
+
+                    <div class="project-tech">
+
+                        <span>Python</span>
+                        <span>Data Analysis</span>
+
+                    </div>
+
+
+                    <div class="project-buttons">
+
+                        <a href="#" class="project-btn">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            View Code
+
+                        </a>
+
+
+                        <a href="#" class="project-btn">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            Live Demo
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section reveal">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    CONTACT
+                </p>
+
+                <h2>
+                    Let's <span>Connect</span>
+                </h2>
+
+                <p>
+                    Have an idea or want to get in touch?
+                    Feel free to contact me.
+                </p>
+
+            </div>
+
+
+            <div class="contact-container">
+
+
+                <div class="contact-card glass-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <a href="mailto:alokumar875623@gmail.com">
+
+                        alokumar875623@gmail.com
+
                     </a>
 
+                </div>
+
+
+                <div class="contact-card glass-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        Lucknow, Uttar Pradesh
+                    </p>
+
+                </div>
+
+
+                <div class="contact-card glass-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <h3>
+                        LinkedIn
+                    </h3>
+
                     <a
-                        href="#"
-                        class="project-btn demo-btn"
+                        href="https://www.linkedin.com/in/alok-kumar-alok-kumar-84584632b"
                         target="_blank"
                         rel="noopener noreferrer">
-                        Live Demo
+
+                        Connect with me
+
                     </a>
 
                 </div>
@@ -275,124 +757,69 @@
             </div>
 
 
-            <!-- PROJECT 3 -->
+            <!-- CONTACT SOCIAL ICONS -->
 
-            <div class="project">
+            <div class="contact-socials">
 
-                <h3>
-                    Personal Finance & Expense Intelligence System
-                </h3>
+                <a
+                    href="https://github.com/alokkumarmaurya875623"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub">
 
-                <p>
-                    A system for tracking personal expenses and
-                    understanding spending patterns.
-                </p>
+                    <i class="fa-brands fa-github"></i>
 
-                <span>
-                    Python • Data Analysis
-                </span>
+                </a>
 
-                <div class="project-buttons">
 
-                    <a
-                        href="#"
-                        class="project-btn github-btn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        View Code
-                    </a>
+                <a
+                    href="https://www.linkedin.com/in/alok-kumar-alok-kumar-84584632b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn">
 
-                    <a
-                        href="#"
-                        class="project-btn demo-btn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Live Demo
-                    </a>
+                    <i class="fa-brands fa-linkedin-in"></i>
 
-                </div>
+                </a>
+
+
+                <a
+                    href="mailto:alokumar875623@gmail.com"
+                    aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+    </main>
 
 
-    <!-- ================= CONTACT ================= -->
 
-    <section id="contact">
+    <!-- ================= FOOTER ================= -->
 
-        <p class="section-title">
-            CONTACT
-        </p>
-
-        <h2>
-            Let's Connect
-        </h2>
+    <footer>
 
         <p>
-            Have a project idea, collaboration opportunity,
-            or simply want to connect? Feel free to reach out.
+            © 2026
+            <span>Alok Kumar</span>.
+            All Rights Reserved.
         </p>
 
 
-        <!-- SOCIAL LINKS -->
+        <a
+            href="#home"
+            aria-label="Back to top">
 
-        <div class="social-links">
+            <i class="fa-solid fa-arrow-up"></i>
 
-            <!-- EMAIL -->
+        </a>
 
-            <a
-                href="mailto:alokumar875623@gmail.com"
-                class="social-btn email-btn">
-                📧 Email
-            </a>
+    </footer>
 
-
-            <!-- GITHUB -->
-
-            <a
-                href="https://github.com/alokkumarmaurya875623"
-                class="social-btn github-social-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                🐙 GitHub
-            </a>
-
-
-            <!-- LINKEDIN -->
-
-            <a
-                href="https://www.linkedin.com/in/alok-kumar-alok-kumar-84584632b"
-                class="social-btn linkedin-btn"
-                target="_blank"
-                rel="noopener noreferrer">
-                💼 LinkedIn
-            </a>
-
-        </div>
-
-
-        <!-- CONTACT INFORMATION -->
-
-        <div class="contact-info">
-
-            <p>
-                <strong>Email:</strong>
-                <a href="mailto:alokumar875623@gmail.com">
-                    alokumar875623@gmail.com
-                </a>
-            </p>
-
-            <p>
-                <strong>Location:</strong>
-                Lucknow, Uttar Pradesh
-            </p>
-
-        </div>
-
-    </section>
 
 
     <!-- ================= JAVASCRIPT ================= -->
