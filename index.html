@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Mobile Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
         content="Alok Kumar - BCA Student and Web Developer Portfolio">
@@ -14,6 +14,7 @@
 
     <title>Alok Kumar | Premium Portfolio</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome -->
@@ -25,20 +26,24 @@
 
 <body>
 
-    <!-- ================= ANIMATED BACKGROUND ================= -->
+    <!-- =====================================================
+         ANIMATED BACKGROUND
+    ====================================================== -->
 
     <div class="background-effects">
         <span class="blob blob-one"></span>
         <span class="blob blob-two"></span>
         <span class="blob blob-three"></span>
-    </div>  
+    </div>
 
 
-    <!-- ================= PREMIUM NAVBAR ================= -->
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
 
     <header class="navbar">
 
-        <!-- LEFT: NAME -->
+        <!-- BRAND -->
 
         <div class="nav-brand">
             <a href="#home">Alok Kumar</a>
@@ -48,22 +53,25 @@
         <!-- MOBILE MENU BUTTON -->
 
         <button
-            class="menu-toggle"
             id="menu-toggle"
+            class="menu-toggle"
             type="button"
             aria-label="Open navigation menu"
             aria-expanded="false">
 
-            <span></span>
-            <span></span>
-            <span></span>
+            <!-- IMPORTANT: Hamburger Icon -->
+
+            <i class="fa-solid fa-bars"></i>
 
         </button>
 
 
         <!-- NAVIGATION -->
 
-        <nav class="nav-menu" id="nav-menu">
+        <nav
+            class="nav-menu"
+            id="nav-menu"
+            aria-label="Main navigation">
 
             <a href="#home">
                 Home
@@ -88,7 +96,7 @@
         </nav>
 
 
-        <!-- DARK / LIGHT MODE -->
+        <!-- THEME BUTTON -->
 
         <button
             id="theme-toggle"
@@ -96,49 +104,69 @@
             type="button"
             aria-label="Toggle dark and light mode">
 
-            ☀️
+            <i class="fa-solid fa-sun"></i>
 
         </button>
 
     </header>
 
 
-    <!-- ================= MAIN ================= -->
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
 
     <main>
 
 
-        <!-- ================= HOME ================= -->
+        <!-- =================================================
+             HOME
+        ================================================== -->
 
-        <section id="home" class="hero reveal">
+        <section
+            id="home"
+            class="hero reveal">
 
             <div class="hero-content">
 
                 <p class="welcome">
+
                     <span></span>
+
                     WELCOME TO MY PORTFOLIO
+
                 </p>
 
 
                 <h1>
+
                     Hello, I'm
+
                     <span class="gradient-text">
                         Alok Kumar
                     </span>
+
                 </h1>
 
 
                 <h2>
+
                     BCA Student
-                    <span>&</span>
+
+                    <span>&amp;</span>
+
                     Web Developer
+
                 </h2>
 
 
                 <p class="intro">
-                    I am passionate about web development and creating
-                    modern, responsive and user-friendly websites.
-                    I love turning ideas into beautiful digital experiences.
+
+                    I am passionate about web development
+                    and creating modern, responsive and
+                    user-friendly websites. I love turning
+                    ideas into beautiful digital experiences.
+
                 </p>
 
 
@@ -209,7 +237,7 @@
             </div>
 
 
-            <!-- PROFILE -->
+            <!-- PROFILE PHOTO -->
 
             <div class="hero-photo">
 
@@ -224,6 +252,8 @@
                 </div>
 
 
+                <!-- FLOATING CARD 1 -->
+
                 <div class="floating-card card-one">
 
                     <i class="fa-solid fa-code"></i>
@@ -232,6 +262,8 @@
 
                 </div>
 
+
+                <!-- FLOATING CARD 2 -->
 
                 <div class="floating-card card-two">
 
@@ -247,9 +279,13 @@
 
 
 
-        <!-- ================= ABOUT ================= -->
+        <!-- =================================================
+             ABOUT
+        ================================================== -->
 
-        <section id="about" class="section reveal">
+        <section
+            id="about"
+            class="section reveal">
 
             <div class="section-heading">
 
@@ -271,6 +307,8 @@
             <div class="about-grid">
 
 
+                <!-- ABOUT MAIN -->
+
                 <div class="glass-card about-main">
 
                     <h3>
@@ -278,23 +316,28 @@
                     </h3>
 
                     <p>
-                        I am a BCA student and aspiring Web Developer.
-                        I am interested in website designing, web development
-                        and software development.
+                        I am a BCA student and aspiring Web
+                        Developer. I am interested in website
+                        designing, web development and software
+                        development.
                     </p>
 
                     <p>
-                        I enjoy learning new technologies and building useful,
-                        modern and user-friendly websites.
+                        I enjoy learning new technologies and
+                        building useful, modern and user-friendly
+                        websites.
                     </p>
 
                     <p>
-                        My goal is to continuously improve my technical skills
-                        and create meaningful digital experiences.
+                        My goal is to continuously improve my
+                        technical skills and create meaningful
+                        digital experiences.
                     </p>
 
                 </div>
 
+
+                <!-- ABOUT INFORMATION -->
 
                 <div class="about-info">
 
@@ -351,9 +394,13 @@
 
 
 
-        <!-- ================= SKILLS ================= -->
+        <!-- =================================================
+             SKILLS
+        ================================================== -->
 
-        <section id="skills" class="section reveal">
+        <section
+            id="skills"
+            class="section reveal">
 
             <div class="section-heading">
 
@@ -362,8 +409,10 @@
                 </p>
 
                 <h2>
+
                     Technologies I
                     <span>Work With</span>
+
                 </h2>
 
                 <p>
@@ -376,6 +425,8 @@
 
             <div class="skills-container">
 
+
+                <!-- HTML -->
 
                 <div class="skill-card glass-card">
 
@@ -396,6 +447,8 @@
                 </div>
 
 
+                <!-- CSS -->
+
                 <div class="skill-card glass-card">
 
                     <i class="fa-brands fa-css3-alt"></i>
@@ -414,6 +467,8 @@
 
                 </div>
 
+
+                <!-- JAVASCRIPT -->
 
                 <div class="skill-card glass-card">
 
@@ -434,6 +489,8 @@
                 </div>
 
 
+                <!-- PYTHON -->
+
                 <div class="skill-card glass-card">
 
                     <i class="fa-brands fa-python"></i>
@@ -453,6 +510,8 @@
                 </div>
 
 
+                <!-- JAVA -->
+
                 <div class="skill-card glass-card">
 
                     <i class="fa-brands fa-java"></i>
@@ -471,6 +530,8 @@
 
                 </div>
 
+
+                <!-- C -->
 
                 <div class="skill-card glass-card">
 
@@ -496,9 +557,13 @@
 
 
 
-        <!-- ================= PROJECTS ================= -->
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
 
-        <section id="projects" class="section reveal">
+        <section
+            id="projects"
+            class="section reveal">
 
             <div class="section-heading">
 
@@ -507,8 +572,10 @@
                 </p>
 
                 <h2>
+
                     Projects I Have
                     <span>Built</span>
+
                 </h2>
 
                 <p>
@@ -526,7 +593,9 @@
                 <div class="project-card glass-card">
 
                     <div class="project-icon">
+
                         <i class="fa-solid fa-users"></i>
+
                     </div>
 
                     <h3>
@@ -534,8 +603,8 @@
                     </h3>
 
                     <p>
-                        A system designed to manage student information
-                        and academic records efficiently.
+                        A system designed to manage student
+                        information and academic records efficiently.
                     </p>
 
                     <div class="project-tech">
@@ -548,7 +617,9 @@
 
                     <div class="project-buttons">
 
-                        <a href="#" class="project-btn">
+                        <a
+                            href="#"
+                            class="project-btn">
 
                             <i class="fa-brands fa-github"></i>
 
@@ -557,7 +628,9 @@
                         </a>
 
 
-                        <a href="#" class="project-btn">
+                        <a
+                            href="#"
+                            class="project-btn">
 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
@@ -576,7 +649,9 @@
                 <div class="project-card glass-card">
 
                     <div class="project-icon">
+
                         <i class="fa-solid fa-book"></i>
+
                     </div>
 
                     <h3>
@@ -584,8 +659,8 @@
                     </h3>
 
                     <p>
-                        A project for managing books, students and
-                        library records efficiently.
+                        A project for managing books, students
+                        and library records efficiently.
                     </p>
 
                     <div class="project-tech">
@@ -598,7 +673,9 @@
 
                     <div class="project-buttons">
 
-                        <a href="#" class="project-btn">
+                        <a
+                            href="#"
+                            class="project-btn">
 
                             <i class="fa-brands fa-github"></i>
 
@@ -607,7 +684,9 @@
                         </a>
 
 
-                        <a href="#" class="project-btn">
+                        <a
+                            href="#"
+                            class="project-btn">
 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
@@ -626,17 +705,19 @@
                 <div class="project-card glass-card">
 
                     <div class="project-icon">
+
                         <i class="fa-solid fa-chart-line"></i>
+
                     </div>
 
                     <h3>
-                        Personal Finance & Expense
+                        Personal Finance &amp; Expense
                         Intelligence System
                     </h3>
 
                     <p>
-                        A system for tracking personal expenses and
-                        understanding spending patterns.
+                        A system for tracking personal expenses
+                        and understanding spending patterns.
                     </p>
 
                     <div class="project-tech">
@@ -649,7 +730,9 @@
 
                     <div class="project-buttons">
 
-                        <a href="#" class="project-btn">
+                        <a
+                            href="#"
+                            class="project-btn">
 
                             <i class="fa-brands fa-github"></i>
 
@@ -658,7 +741,9 @@
                         </a>
 
 
-                        <a href="#" class="project-btn">
+                        <a
+                            href="#"
+                            class="project-btn">
 
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
@@ -676,9 +761,13 @@
 
 
 
-        <!-- ================= CONTACT ================= -->
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
 
-        <section id="contact" class="section reveal">
+        <section
+            id="contact"
+            class="section reveal">
 
             <div class="section-heading">
 
@@ -701,10 +790,14 @@
             <div class="contact-container">
 
 
+                <!-- EMAIL -->
+
                 <div class="contact-card glass-card">
 
                     <div class="contact-icon">
+
                         <i class="fa-solid fa-envelope"></i>
+
                     </div>
 
                     <h3>
@@ -720,10 +813,14 @@
                 </div>
 
 
+                <!-- LOCATION -->
+
                 <div class="contact-card glass-card">
 
                     <div class="contact-icon">
+
                         <i class="fa-solid fa-location-dot"></i>
+
                     </div>
 
                     <h3>
@@ -737,10 +834,14 @@
                 </div>
 
 
+                <!-- LINKEDIN -->
+
                 <div class="contact-card glass-card">
 
                     <div class="contact-icon">
+
                         <i class="fa-brands fa-linkedin-in"></i>
+
                     </div>
 
                     <h3>
@@ -761,7 +862,7 @@
             </div>
 
 
-            <!-- CONTACT SOCIAL ICONS -->
+            <!-- CONTACT SOCIALS -->
 
             <div class="contact-socials">
 
@@ -803,14 +904,22 @@
 
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer>
 
         <p>
+
             © 2026
-            <span>Alok Kumar</span>.
+
+            <span>
+                Alok Kumar
+            </span>.
+
             All Rights Reserved.
+
         </p>
 
 
@@ -826,7 +935,9 @@
 
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="script.js"></script>
 
