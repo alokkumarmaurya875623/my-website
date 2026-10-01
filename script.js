@@ -1,134 +1,65 @@
 /* =========================================================
-   ALOK KUMAR PORTFOLIO JAVASCRIPT
+   ALOK KUMAR PORTFOLIO
+   MAIN JAVASCRIPT
 ========================================================= */
 
 
-/* =========================================================
-   THEME
-========================================================= */
+/* ================= MOBILE MENU ================= */
 
-const themeToggle = document.getElementById("theme-toggle");
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "light") {
-    document.body.classList.remove("dark");
-} else {
-    document.body.classList.add("dark");
-}
-
-
-function updateThemeIcon() {
-
-    if (!themeToggle) return;
-
-    if (document.body.classList.contains("dark")) {
-
-        themeToggle.innerHTML =
-            '<i class="fa-solid fa-moon"></i>';
-
-    } else {
-
-        themeToggle.innerHTML =
-            '<i class="fa-solid fa-sun"></i>';
-    }
-}
-
-updateThemeIcon();
-
-
-if (themeToggle) {
-
-    themeToggle.addEventListener("click", () => {
-
-        document.body.classList.toggle("dark");
-
-        const isDark =
-            document.body.classList.contains("dark");
-
-        localStorage.setItem(
-            "theme",
-            isDark ? "dark" : "light"
-        );
-
-        updateThemeIcon();
-    });
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuToggle =
-    document.getElementById("menu-toggle");
-
-const navMenu =
-    document.getElementById("nav-menu");
-
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
 
 if (menuToggle && navMenu) {
 
-    menuToggle.addEventListener("click", (event) => {
-
-        event.stopPropagation();
-
-        navMenu.classList.toggle("active");
-
-        const icon =
-            menuToggle.querySelector("i");
+    menuToggle.addEventListener("click", () => {
 
         const isOpen =
-            navMenu.classList.contains("active");
-
-        if (icon) {
-
-            icon.classList.toggle(
-                "fa-bars",
-                !isOpen
-            );
-
-            icon.classList.toggle(
-                "fa-xmark",
-                isOpen
-            );
-        }
+            navMenu.classList.toggle("active");
 
         menuToggle.setAttribute(
             "aria-expanded",
-            isOpen ? "true" : "false"
+            isOpen
         );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
     });
 
 
-    /* Close after clicking link */
+    /* Close menu after clicking a link */
 
-    navMenu.querySelectorAll("a").forEach(link => {
+    const navLinks =
+        navMenu.querySelectorAll("a");
+
+    navLinks.forEach(link => {
 
         link.addEventListener("click", () => {
 
             navMenu.classList.remove("active");
 
-            const icon =
-                menuToggle.querySelector("i");
-
-            if (icon) {
-
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-            }
-
             menuToggle.setAttribute(
                 "aria-expanded",
                 "false"
             );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
         });
+
     });
 
 
-    /* Close outside */
+    /* Close menu when clicking outside */
 
-    document.addEventListener("click", event => {
+    document.addEventListener("click", (event) => {
 
         if (
             !navMenu.contains(event.target) &&
@@ -137,151 +68,199 @@ if (menuToggle && navMenu) {
 
             navMenu.classList.remove("active");
 
-            const icon =
-                menuToggle.querySelector("i");
-
-            if (icon) {
-
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-            }
-
             menuToggle.setAttribute(
                 "aria-expanded",
                 "false"
             );
+
         }
+
     });
+
 }
 
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+/* ================= THEME TOGGLE ================= */
+
+const themeToggle =
+    document.getElementById("theme-toggle");
+
+const themeIcon =
+    themeToggle?.querySelector("i");
+
+
+function setTheme(isLight) {
+
+    document.body.classList.toggle(
+        "light-mode",
+        isLight
+    );
+
+    if (themeIcon) {
+
+        themeIcon.className =
+            isLight
+                ? "fa-solid fa-moon"
+                : "fa-solid fa-sun";
+    }
+
+    localStorage.setItem(
+        "portfolio-theme",
+        isLight ? "light" : "dark"
+    );
+}
+
+
+/* Load saved theme */
+
+const savedTheme =
+    localStorage.getItem("portfolio-theme");
+
+if (savedTheme === "light") {
+
+    setTheme(true);
+
+} else {
+
+    setTheme(false);
+}
+
+
+/* Theme button */
+
+if (themeToggle) {
+
+    themeToggle.addEventListener("click", () => {
+
+        const isLight =
+            !document.body.classList.contains(
+                "light-mode"
+            );
+
+        setTheme(isLight);
+
+    });
+
+}
+
+
+/* ================= SCROLL REVEAL ================= */
 
 const revealElements =
     document.querySelectorAll(".reveal");
 
 
-function revealOnScroll() {
+const revealObserver =
+    new IntersectionObserver(
+        (entries) => {
 
-    const windowHeight =
-        window.innerHeight;
+            entries.forEach(entry => {
 
-    revealElements.forEach(element => {
+                if (entry.isIntersecting) {
 
-        const elementTop =
-            element.getBoundingClientRect().top;
+                    entry.target.classList.add(
+                        "active"
+                    );
 
-        if (
-            elementTop <
-            windowHeight - 80
-        ) {
+                    revealObserver.unobserve(
+                        entry.target
+                    );
+                }
 
-            element.classList.add("active");
+            });
+
+        },
+        {
+            threshold: 0.12
         }
-    });
-}
-
-
-window.addEventListener(
-    "scroll",
-    revealOnScroll,
-    { passive: true }
-);
-
-window.addEventListener(
-    "load",
-    revealOnScroll
-);
-
-
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
-
-const sections =
-    document.querySelectorAll("section[id]");
-
-const navLinks =
-    document.querySelectorAll(
-        "#nav-menu a, .nav-menu a"
     );
 
 
-function updateActiveNav() {
+revealElements.forEach(element => {
 
-    let current = "";
+    revealObserver.observe(element);
+
+});
+
+
+/* ================= ACTIVE NAVIGATION ================= */
+
+const sections =
+    document.querySelectorAll(
+        "section[id]"
+    );
+
+const navigationLinks =
+    document.querySelectorAll(
+        ".nav-menu a"
+    );
+
+
+window.addEventListener("scroll", () => {
+
+    let currentSection = "";
 
     sections.forEach(section => {
 
         const sectionTop =
-            section.offsetTop - 160;
-
-        const sectionBottom =
-            sectionTop + section.offsetHeight;
+            section.offsetTop - 150;
 
         if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionBottom
+            window.scrollY >= sectionTop
         ) {
 
-            current =
+            currentSection =
                 section.getAttribute("id");
         }
+
     });
 
 
-    navLinks.forEach(link => {
+    navigationLinks.forEach(link => {
 
         link.classList.remove("active");
 
+        const target =
+            link.getAttribute("href");
+
         if (
-            link.getAttribute("href") ===
-            "#" + current
+            target === `#${currentSection}`
         ) {
 
             link.classList.add("active");
         }
+
     });
+
+});
+
+
+/* ================= BACK TO TOP ================= */
+
+const backToTop =
+    document.querySelector(
+        'footer a[href="#home"]'
+    );
+
+if (backToTop) {
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
 }
 
 
-window.addEventListener(
-    "scroll",
-    updateActiveNav,
-    { passive: true }
-);
-
-window.addEventListener(
-    "load",
-    updateActiveNav
-);
-
-
-/* =========================================================
-   PROJECT PLACEHOLDER
-========================================================= */
-
-document
-    .querySelectorAll('.project-btn[href="#"]')
-    .forEach(button => {
-
-        button.addEventListener("click", event => {
-
-            event.preventDefault();
-
-            alert(
-                "Project link will be added soon."
-            );
-        });
-    });
-
-
-/* =========================================================
-   CONSOLE
-========================================================= */
+/* ================= CONSOLE ================= */
 
 console.log(
-    "🚀 Alok Kumar Portfolio loaded successfully!"
+    "Alok Kumar Portfolio Loaded Successfully."
 );

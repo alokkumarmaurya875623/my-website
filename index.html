@@ -4,61 +4,44 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
         content="Alok Kumar - BCA Student and Web Developer Portfolio">
 
-    <meta name="author"
-        content="Alok Kumar">
+    <meta name="author" content="Alok Kumar">
 
-    <title>Alok Kumar | Premium Portfolio</title>
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>Alok Kumar | Portfolio</title>
 
     <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
 
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
-    <!-- =====================================================
-         ANIMATED BACKGROUND
-    ====================================================== -->
+    <!-- ================= BACKGROUND ================= -->
 
     <div class="background-effects">
-
         <span class="blob blob-one"></span>
-
         <span class="blob blob-two"></span>
-
         <span class="blob blob-three"></span>
-
     </div>
 
 
-    <!-- =====================================================
-         NAVBAR
-    ====================================================== -->
+    <!-- ================= NAVBAR ================= -->
 
     <header class="navbar">
 
-        <!-- BRAND -->
         <div class="nav-brand">
-
-            <a href="#home">
-                Alok Kumar
-            </a>
-
+            <a href="#home">Alok Kumar</a>
         </div>
 
-
-        <!-- MOBILE MENU BUTTON -->
+        <!-- Mobile Menu Button -->
         <button
             class="menu-toggle"
             id="menu-toggle"
@@ -73,116 +56,98 @@
         </button>
 
 
-        <!-- NAVIGATION -->
-        <nav
-            class="nav-menu"
-            id="nav-menu"
-            aria-label="Main navigation">
+        <!-- Navigation -->
+        <nav class="nav-menu" id="nav-menu">
 
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#skills">
-                Skills
-            </a>
-
-            <a href="#projects">
-                Projects
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
 
         </nav>
 
 
-        <!-- THEME BUTTON -->
+        <!-- Theme Button -->
         <button
-            id="theme-toggle"
             class="theme-toggle"
+            id="theme-toggle"
             type="button"
-            aria-label="Toggle dark and light mode">
+            aria-label="Toggle theme">
 
-            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
 
         </button>
 
     </header>
 
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-    ====================================================== -->
+    <!-- ================= MAIN ================= -->
 
     <main>
 
 
-        <!-- =================================================
-             HOME
-        ================================================== -->
+        <!-- ================= HOME ================= -->
 
-        <section
-            id="home"
-            class="hero reveal">
+        <section id="home" class="hero reveal">
+
+            <!-- Profile Photo -->
+
+            <div class="hero-photo">
+
+                <div class="photo-ring">
+
+                    <img
+                        src="profile.jpg"
+                        alt="Alok Kumar">
+
+                </div>
+
+                <div class="floating-card card-one">
+                    <i class="fa-solid fa-code"></i>
+                    Web Developer
+                </div>
+
+                <div class="floating-card card-two">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    BCA Student
+                </div>
+
+            </div>
 
 
-            <!-- HERO CONTENT -->
+            <!-- Hero Content -->
+
             <div class="hero-content">
 
-
                 <p class="welcome">
-
                     <span></span>
-
                     WELCOME TO MY PORTFOLIO
-
                 </p>
 
-
                 <h1>
-
                     Hello, I'm
-
                     <span class="gradient-text">
                         Alok Kumar
                     </span>
-
                 </h1>
 
-
                 <h2>
-
                     BCA Student
-
                     <span>&amp;</span>
-
                     Web Developer
-
                 </h2>
 
-
                 <p class="intro">
-
-                    I am passionate about web development
-                    and creating modern, responsive and
-                    user-friendly websites.
-                    I love turning ideas into beautiful
-                    digital experiences.
-
+                    I am passionate about web development and creating
+                    modern, responsive and user-friendly websites.
+                    I love turning ideas into beautiful digital experiences.
                 </p>
 
 
-                <!-- SOCIAL LINKS -->
+                <!-- Social Links -->
 
                 <div class="social-links">
-
 
                     <a
                         href="https://github.com/alokkumarmaurya875623"
@@ -194,7 +159,6 @@
 
                     </a>
 
-
                     <a
                         href="https://www.linkedin.com/in/alok-kumar-alok-kumar-84584632b"
                         target="_blank"
@@ -205,7 +169,6 @@
 
                     </a>
 
-
                     <a
                         href="mailto:alokumar875623@gmail.com"
                         aria-label="Email">
@@ -214,211 +177,99 @@
 
                     </a>
 
-
                 </div>
 
 
-                <!-- HOME BUTTONS -->
+                <!-- Buttons -->
 
                 <div class="home-buttons">
 
-
-                    <a
-                        href="#projects"
-                        class="btn primary-btn">
-
+                    <a href="#projects" class="btn primary-btn">
                         <i class="fa-solid fa-code"></i>
-
                         View Projects
-
                     </a>
 
-
-                    <a
-                        href="#contact"
-                        class="btn secondary-btn">
-
+                    <a href="#contact" class="btn secondary-btn">
                         <i class="fa-regular fa-paper-plane"></i>
-
                         Contact Me
-
                     </a>
 
-
                 </div>
-
 
             </div>
-
-
-
-            <!-- PROFILE PHOTO -->
-
-            <div class="hero-photo">
-
-
-                <div class="photo-ring">
-
-                    <div class="photo-glow"></div>
-
-
-                    <img
-                        src="profile.jpg"
-                        alt="Alok Kumar">
-
-
-                </div>
-
-
-
-                <!-- FLOATING CARD -->
-
-                <div class="floating-card card-one">
-
-                    <i class="fa-solid fa-code"></i>
-
-                    Web Developer
-
-                </div>
-
-
-                <!-- FLOATING CARD -->
-
-                <div class="floating-card card-two">
-
-                    <i class="fa-solid fa-graduation-cap"></i>
-
-                    BCA Student
-
-                </div>
-
-
-            </div>
-
 
         </section>
 
 
 
-        <!-- =================================================
-             ABOUT
-        ================================================== -->
+        <!-- ================= ABOUT ================= -->
 
-        <section
-            id="about"
-            class="section reveal">
-
+        <section id="about" class="section reveal">
 
             <div class="section-heading">
-
 
                 <p class="section-label">
                     ABOUT ME
                 </p>
 
-
                 <h2>
-
-                    Who
-
-                    <span>
-                        I Am
-                    </span>
-
+                    Who <span>I Am</span>
                 </h2>
-
 
                 <p>
                     Get to know me and my journey.
                 </p>
 
-
             </div>
-
 
 
             <div class="about-grid">
 
-
-                <!-- ABOUT MAIN -->
-
                 <div class="glass-card about-main">
-
 
                     <h3>
                         I'm Alok Kumar
                     </h3>
 
-
                     <p>
-
-                        I am a BCA student and aspiring
-                        Web Developer. I am interested in
-                        website designing, web development
+                        I am a BCA student and aspiring Web Developer.
+                        I am interested in website designing, web development
                         and software development.
-
                     </p>
-
 
                     <p>
-
-                        I enjoy learning new technologies
-                        and building useful, modern and
-                        user-friendly websites.
-
+                        I enjoy learning new technologies and building useful,
+                        modern and user-friendly websites.
                     </p>
-
 
                     <p>
-
-                        My goal is to continuously improve
-                        my technical skills and create
-                        meaningful digital experiences.
-
+                        My goal is to continuously improve my technical skills
+                        and create meaningful digital experiences.
                     </p>
-
 
                 </div>
 
 
-
-                <!-- ABOUT INFORMATION -->
-
                 <div class="about-info">
-
-
-                    <!-- EDUCATION -->
 
                     <div class="info-card glass-card">
 
                         <i class="fa-solid fa-graduation-cap"></i>
 
-
-                        <h3>
-                            Education
-                        </h3>
-
+                        <h3>Education</h3>
 
                         <p>
-                            Bachelor of Computer
-                            Applications (BCA)
+                            Bachelor of Computer Applications (BCA)
                         </p>
 
                     </div>
 
 
-
-                    <!-- FOCUS -->
-
                     <div class="info-card glass-card">
 
                         <i class="fa-solid fa-laptop-code"></i>
 
-
-                        <h3>
-                            Focus
-                        </h3>
-
+                        <h3>Focus</h3>
 
                         <p>
                             Web Development
@@ -427,18 +278,11 @@
                     </div>
 
 
-
-                    <!-- LOCATION -->
-
                     <div class="info-card glass-card">
 
                         <i class="fa-solid fa-location-dot"></i>
 
-
-                        <h3>
-                            Location
-                        </h3>
-
+                        <h3>Location</h3>
 
                         <p>
                             Lucknow, Uttar Pradesh
@@ -446,629 +290,320 @@
 
                     </div>
 
-
                 </div>
 
-
             </div>
-
 
         </section>
 
 
 
-        <!-- =================================================
-             SKILLS
-        ================================================== -->
+        <!-- ================= SKILLS ================= -->
 
-        <section
-            id="skills"
-            class="section reveal">
-
+        <section id="skills" class="section reveal">
 
             <div class="section-heading">
-
 
                 <p class="section-label">
                     MY SKILLS
                 </p>
 
-
                 <h2>
-
                     Technologies I
-
-                    <span>
-                        Work With
-                    </span>
-
+                    <span>Work With</span>
                 </h2>
 
-
                 <p>
-
-                    Technologies and programming
-                    languages I am learning and using.
-
+                    Technologies and programming languages
+                    I am learning and using.
                 </p>
 
-
             </div>
-
 
 
             <div class="skills-container">
 
-
-                <!-- HTML -->
-
                 <div class="skill-card glass-card">
-
-
                     <i class="fa-brands fa-html5"></i>
-
-
-                    <h3>
-                        HTML
-                    </h3>
-
-
-                    <p>
-                        Web Structure
-                    </p>
-
+                    <h3>HTML</h3>
+                    <p>Web Structure</p>
 
                     <div class="skill-line">
-
-                        <span
-                            style="width:90%">
-                        </span>
-
+                        <span style="width:90%"></span>
                     </div>
-
-
                 </div>
 
 
-
-                <!-- CSS -->
-
                 <div class="skill-card glass-card">
-
-
                     <i class="fa-brands fa-css3-alt"></i>
-
-
-                    <h3>
-                        CSS
-                    </h3>
-
-
-                    <p>
-                        Web Design
-                    </p>
-
+                    <h3>CSS</h3>
+                    <p>Web Design</p>
 
                     <div class="skill-line">
-
-                        <span
-                            style="width:85%">
-                        </span>
-
+                        <span style="width:85%"></span>
                     </div>
-
-
                 </div>
 
 
-
-                <!-- JAVASCRIPT -->
-
                 <div class="skill-card glass-card">
-
-
                     <i class="fa-brands fa-js"></i>
-
-
-                    <h3>
-                        JavaScript
-                    </h3>
-
-
-                    <p>
-                        Web Interactivity
-                    </p>
-
+                    <h3>JavaScript</h3>
+                    <p>Web Interactivity</p>
 
                     <div class="skill-line">
-
-                        <span
-                            style="width:75%">
-                        </span>
-
+                        <span style="width:75%"></span>
                     </div>
-
-
                 </div>
 
 
-
-                <!-- PYTHON -->
-
                 <div class="skill-card glass-card">
-
-
                     <i class="fa-brands fa-python"></i>
-
-
-                    <h3>
-                        Python
-                    </h3>
-
-
-                    <p>
-                        Programming
-                    </p>
-
+                    <h3>Python</h3>
+                    <p>Programming</p>
 
                     <div class="skill-line">
-
-                        <span
-                            style="width:75%">
-                        </span>
-
+                        <span style="width:75%"></span>
                     </div>
-
-
                 </div>
 
 
-
-                <!-- JAVA -->
-
                 <div class="skill-card glass-card">
-
-
                     <i class="fa-brands fa-java"></i>
-
-
-                    <h3>
-                        Java
-                    </h3>
-
-
-                    <p>
-                        Programming
-                    </p>
-
+                    <h3>Java</h3>
+                    <p>Programming</p>
 
                     <div class="skill-line">
-
-                        <span
-                            style="width:80%">
-                        </span>
-
+                        <span style="width:80%"></span>
                     </div>
-
-
                 </div>
 
-
-
-                <!-- C -->
 
                 <div class="skill-card glass-card">
-
-
                     <i class="fa-solid fa-c"></i>
-
-
-                    <h3>
-                        C
-                    </h3>
-
-
-                    <p>
-                        Programming
-                    </p>
-
+                    <h3>C</h3>
+                    <p>Programming</p>
 
                     <div class="skill-line">
-
-                        <span
-                            style="width:80%">
-                        </span>
-
+                        <span style="width:80%"></span>
                     </div>
-
-
                 </div>
-
 
             </div>
-
 
         </section>
 
 
 
-        <!-- =================================================
-             PROJECTS
-        ================================================== -->
+        <!-- ================= PROJECTS ================= -->
 
-        <section
-            id="projects"
-            class="section reveal">
-
+        <section id="projects" class="section reveal">
 
             <div class="section-heading">
-
 
                 <p class="section-label">
                     MY PROJECTS
                 </p>
 
-
                 <h2>
-
                     Projects I Have
-
-                    <span>
-                        Built
-                    </span>
-
+                    <span>Built</span>
                 </h2>
 
-
                 <p>
-                    Some of my academic and development
-                    projects.
+                    Some of my academic and development projects.
                 </p>
 
-
             </div>
-
 
 
             <div class="projects-container">
 
 
-                <!-- PROJECT 1 -->
+                <!-- Project 1 -->
 
                 <div class="project-card glass-card">
 
-
                     <div class="project-icon">
-
                         <i class="fa-solid fa-users"></i>
-
                     </div>
-
 
                     <h3>
                         Student Management System
                     </h3>
 
-
                     <p>
-
-                        A system designed to manage
-                        student information and academic
-                        records efficiently.
-
+                        A system designed to manage student
+                        information and academic records efficiently.
                     </p>
 
-
                     <div class="project-tech">
-
-                        <span>
-                            Java
-                        </span>
-
-                        <span>
-                            Database
-                        </span>
-
+                        <span>Java</span>
+                        <span>Database</span>
                     </div>
-
 
                     <div class="project-buttons">
 
-
-                        <a
-                            href="#"
-                            class="project-btn">
-
+                        <a href="#" class="project-btn">
                             <i class="fa-brands fa-github"></i>
-
                             View Code
-
                         </a>
 
-
-                        <a
-                            href="#"
-                            class="project-btn">
-
+                        <a href="#" class="project-btn">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                             Live Demo
-
                         </a>
-
 
                     </div>
-
 
                 </div>
 
 
-
-                <!-- PROJECT 2 -->
+                <!-- Project 2 -->
 
                 <div class="project-card glass-card">
 
-
                     <div class="project-icon">
-
                         <i class="fa-solid fa-book"></i>
-
                     </div>
-
 
                     <h3>
                         Library Management System
                     </h3>
 
-
                     <p>
-
-                        A project for managing books,
-                        students and library records
-                        efficiently.
-
+                        A project for managing books, students
+                        and library records efficiently.
                     </p>
 
-
                     <div class="project-tech">
-
-                        <span>
-                            Java
-                        </span>
-
-                        <span>
-                            Database
-                        </span>
-
+                        <span>Java</span>
+                        <span>Database</span>
                     </div>
-
 
                     <div class="project-buttons">
 
-
-                        <a
-                            href="#"
-                            class="project-btn">
-
+                        <a href="#" class="project-btn">
                             <i class="fa-brands fa-github"></i>
-
                             View Code
-
                         </a>
 
-
-                        <a
-                            href="#"
-                            class="project-btn">
-
+                        <a href="#" class="project-btn">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                             Live Demo
-
                         </a>
-
 
                     </div>
-
 
                 </div>
 
 
-
-                <!-- PROJECT 3 -->
+                <!-- Project 3 -->
 
                 <div class="project-card glass-card">
 
-
                     <div class="project-icon">
-
                         <i class="fa-solid fa-chart-line"></i>
-
                     </div>
-
 
                     <h3>
-
                         Personal Finance &amp; Expense
                         Intelligence System
-
                     </h3>
 
-
                     <p>
-
-                        A system for tracking personal
-                        expenses and understanding
-                        spending patterns.
-
+                        A system for tracking personal expenses
+                        and understanding spending patterns.
                     </p>
 
-
                     <div class="project-tech">
-
-                        <span>
-                            Python
-                        </span>
-
-                        <span>
-                            Data Analysis
-                        </span>
-
+                        <span>Python</span>
+                        <span>Data Analysis</span>
                     </div>
-
 
                     <div class="project-buttons">
 
-
-                        <a
-                            href="#"
-                            class="project-btn">
-
+                        <a href="#" class="project-btn">
                             <i class="fa-brands fa-github"></i>
-
                             View Code
-
                         </a>
 
-
-                        <a
-                            href="#"
-                            class="project-btn">
-
+                        <a href="#" class="project-btn">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
                             Live Demo
-
                         </a>
-
 
                     </div>
 
-
                 </div>
 
-
             </div>
-
 
         </section>
 
 
 
-        <!-- =================================================
-             CONTACT
-        ================================================== -->
+        <!-- ================= CONTACT ================= -->
 
-        <section
-            id="contact"
-            class="section reveal">
-
+        <section id="contact" class="section reveal">
 
             <div class="section-heading">
-
 
                 <p class="section-label">
                     CONTACT
                 </p>
 
-
                 <h2>
-
-                    Let's
-
-                    <span>
-                        Connect
-                    </span>
-
+                    Let's <span>Connect</span>
                 </h2>
 
-
                 <p>
-
                     Have an idea or want to get in touch?
                     Feel free to contact me.
-
                 </p>
 
-
             </div>
-
 
 
             <div class="contact-container">
 
 
-                <!-- EMAIL -->
-
                 <div class="contact-card glass-card">
 
-
                     <div class="contact-icon">
-
                         <i class="fa-solid fa-envelope"></i>
-
                     </div>
 
+                    <h3>Email</h3>
 
-                    <h3>
-                        Email
-                    </h3>
-
-
-                    <a
-                        href="mailto:alokumar875623@gmail.com">
-
+                    <a href="mailto:alokumar875623@gmail.com">
                         alokumar875623@gmail.com
-
                     </a>
-
 
                 </div>
 
 
-
-                <!-- LOCATION -->
-
                 <div class="contact-card glass-card">
 
-
                     <div class="contact-icon">
-
                         <i class="fa-solid fa-location-dot"></i>
-
                     </div>
 
-
-                    <h3>
-                        Location
-                    </h3>
-
+                    <h3>Location</h3>
 
                     <p>
                         Lucknow, Uttar Pradesh
                     </p>
 
-
                 </div>
 
 
-
-                <!-- LINKEDIN -->
-
                 <div class="contact-card glass-card">
 
-
                     <div class="contact-icon">
-
                         <i class="fa-brands fa-linkedin-in"></i>
-
                     </div>
 
-
-                    <h3>
-                        LinkedIn
-                    </h3>
-
+                    <h3>LinkedIn</h3>
 
                     <a
                         href="https://www.linkedin.com/in/alok-kumar-alok-kumar-84584632b"
@@ -1079,18 +614,12 @@
 
                     </a>
 
-
                 </div>
-
 
             </div>
 
 
-
-            <!-- CONTACT SOCIALS -->
-
             <div class="contact-socials">
-
 
                 <a
                     href="https://github.com/alokkumarmaurya875623"
@@ -1122,56 +651,34 @@
 
                 </a>
 
-
             </div>
 
-
         </section>
-
 
     </main>
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
-
         <p>
-
             © 2026
-
-            <span>
-                Alok Kumar
-            </span>.
-
+            <span>Alok Kumar</span>.
             All Rights Reserved.
-
         </p>
 
-
-        <a
-            href="#home"
-            aria-label="Back to top">
-
+        <a href="#home" aria-label="Back to top">
             <i class="fa-solid fa-arrow-up"></i>
-
         </a>
-
 
     </footer>
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
-
 
 </body>
 
