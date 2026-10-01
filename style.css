@@ -1522,3 +1522,34 @@ footer span {
         scroll-behavior: auto !important;
     }
 }
+/* ===== MOBILE MENU BUTTON FIX ===== */
+
+.menu-toggle {
+    display: none;
+    width: 64px;
+    height: 64px;
+    border: 2px solid rgba(120, 80, 255, 0.45);
+    border-radius: 22px;
+    background: rgba(15, 25, 55, 0.95);
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+}
+
+.menu-toggle i {
+    display: block !important;
+    font-size: 30px !important;
+    color: #25bfff !important;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex !important;
+    }
+
+}
