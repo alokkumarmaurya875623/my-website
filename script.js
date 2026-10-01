@@ -1,290 +1,248 @@
 /* =========================================================
-   ALOK KUMAR PORTFOLIO - FINAL JAVASCRIPT
-   Theme + Mobile Menu + Scroll Reveal + Active Navigation
+   ALOK KUMAR PORTFOLIO — STEP 15
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
 
-    /* ================= THEME ================= */
+/* =========================================================
+   THEME
+========================================================= */
 
-    const themeToggle = document.getElementById("theme-toggle");
+const themeToggle =
+    document.getElementById("theme-toggle");
 
-    function updateThemeIcon() {
-        if (!themeToggle) return;
+const savedTheme =
+    localStorage.getItem("theme");
 
-        if (document.body.classList.contains("dark")) {
-            themeToggle.innerHTML =
-                '<i class="fa-solid fa-sun"></i>';
-            themeToggle.setAttribute(
-                "aria-label",
-                "Switch to light mode"
-            );
-        } else {
-            themeToggle.innerHTML =
-                '<i class="fa-solid fa-moon"></i>';
-            themeToggle.setAttribute(
-                "aria-label",
-                "Switch to dark mode"
-            );
-        }
-    }
+if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+}
 
-    /* Load saved theme */
-    const savedTheme = localStorage.getItem("theme");
+function updateThemeIcon() {
 
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-    } else {
-        document.body.classList.remove("dark");
-    }
+    if (!themeToggle) return;
 
-    updateThemeIcon();
+    const isDark =
+        document.body.classList.contains("dark") ||
+        document.body.classList.contains("dark-mode");
+
+    themeToggle.innerHTML = isDark
+        ? '<i class="fa-solid fa-moon"></i>'
+        : '<i class="fa-solid fa-sun"></i>';
+}
+
+updateThemeIcon();
 
 
-    /* Theme button */
-    if (themeToggle) {
+if (themeToggle) {
 
-        themeToggle.addEventListener("click", () => {
+    themeToggle.addEventListener("click", () => {
 
-            document.body.classList.toggle("dark");
+        document.body.classList.toggle("dark");
 
-            const isDark =
-                document.body.classList.contains("dark");
+        const isDark =
+            document.body.classList.contains("dark");
 
-            localStorage.setItem(
-                "theme",
-                isDark ? "dark" : "light"
-            );
+        localStorage.setItem(
+            "theme",
+            isDark ? "dark" : "light"
+        );
 
-            updateThemeIcon();
-
-        });
-
-    }
+        updateThemeIcon();
+    });
+}
 
 
-    /* ================= MOBILE MENU ================= */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
-    const menuToggle =
-        document.getElementById("menu-toggle");
+const menuToggle =
+    document.getElementById("menu-toggle");
 
-    const navMenu =
-        document.getElementById("nav-menu");
+const navMenu =
+    document.getElementById("nav-menu");
 
-    if (menuToggle && navMenu) {
+if (menuToggle && navMenu) {
 
-        menuToggle.addEventListener("click", (event) => {
+    menuToggle.addEventListener("click", (event) => {
 
-            event.stopPropagation();
+        event.stopPropagation();
 
-            navMenu.classList.toggle("active");
-            menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
 
-            const isOpen =
-                navMenu.classList.contains("active");
+        menuToggle.classList.toggle("active");
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen ? "true" : "false"
-            );
+        const isOpen =
+            navMenu.classList.contains("active");
 
-        });
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+    });
 
 
-        /* Close menu after clicking navigation link */
+    /* Close after clicking navigation */
 
-        const navLinks =
-            navMenu.querySelectorAll("a");
-
-        navLinks.forEach(link => {
+    navMenu
+        .querySelectorAll("a")
+        .forEach(link => {
 
             link.addEventListener("click", () => {
 
                 navMenu.classList.remove("active");
+
                 menuToggle.classList.remove("active");
 
                 menuToggle.setAttribute(
                     "aria-expanded",
                     "false"
                 );
-
             });
-
         });
 
 
-        /* Close menu when clicking outside */
+    /* Close outside */
 
-        document.addEventListener("click", (event) => {
+    document.addEventListener("click", (event) => {
 
-            if (
-                !navMenu.contains(event.target) &&
-                !menuToggle.contains(event.target)
-            ) {
+        if (
+            !navMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
 
-                navMenu.classList.remove("active");
-                menuToggle.classList.remove("active");
+            navMenu.classList.remove("active");
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+            menuToggle.classList.remove("active");
 
-            }
-
-        });
-
-    }
-
-
-    /* ================= SCROLL REVEAL ================= */
-
-    const revealElements =
-        document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-
-        const windowHeight =
-            window.innerHeight;
-
-        revealElements.forEach(element => {
-
-            const elementTop =
-                element.getBoundingClientRect().top;
-
-            if (elementTop < windowHeight - 80) {
-
-                element.classList.add("active");
-
-            }
-
-        });
-
-    }
-
-    window.addEventListener(
-        "scroll",
-        revealOnScroll
-    );
-
-    window.addEventListener(
-        "load",
-        revealOnScroll
-    );
-
-    revealOnScroll();
-
-
-    /* ================= ACTIVE NAVIGATION ================= */
-
-    const sections =
-        document.querySelectorAll("section[id]");
-
-    const navigationLinks =
-        document.querySelectorAll(
-            "#nav-menu a"
-        );
-
-    function updateActiveNav() {
-
-        let currentSection = "";
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop - 180;
-
-            const sectionHeight =
-                section.offsetHeight;
-
-            if (
-                window.scrollY >= sectionTop &&
-                window.scrollY <
-                sectionTop + sectionHeight
-            ) {
-
-                currentSection =
-                    section.getAttribute("id");
-
-            }
-
-        });
-
-
-        navigationLinks.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                "#" + currentSection
-            ) {
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    }
-
-    window.addEventListener(
-        "scroll",
-        updateActiveNav
-    );
-
-    updateActiveNav();
-
-
-    /* ================= PROJECT BUTTONS ================= */
-
-    document.querySelectorAll(
-        '.project-btn[href="#"]'
-    ).forEach(button => {
-
-        button.addEventListener(
-            "click",
-            event => {
-
-                event.preventDefault();
-
-                alert(
-                    "Project link will be added soon."
-                );
-
-            }
-        );
-
-    });
-
-
-    /* ================= ESC KEY ================= */
-
-    document.addEventListener("keydown", event => {
-
-        if (event.key === "Escape") {
-
-            if (navMenu && menuToggle) {
-
-                navMenu.classList.remove("active");
-                menuToggle.classList.remove("active");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            }
-
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
         }
+    });
+}
 
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+
+    const trigger =
+        window.innerHeight - 80;
+
+    revealElements.forEach(element => {
+
+        const top =
+            element.getBoundingClientRect().top;
+
+        if (top < trigger) {
+
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll,
+    { passive: true }
+);
+
+window.addEventListener(
+    "load",
+    revealOnScroll
+);
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const navLinks =
+    document.querySelectorAll("#nav-menu a");
+
+
+function updateActiveNav() {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const top =
+            section.offsetTop - 180;
+
+        const bottom =
+            top + section.offsetHeight;
+
+        if (
+            window.scrollY >= top &&
+            window.scrollY < bottom
+        ) {
+
+            current =
+                section.getAttribute("id");
+        }
     });
 
 
-    /* ================= CONSOLE ================= */
+    navLinks.forEach(link => {
 
-    console.log(
-        "🚀 Alok Kumar Portfolio loaded successfully!"
-    );
+        link.classList.remove("active");
 
-});
+        if (
+            link.getAttribute("href") ===
+            "#" + current
+        ) {
+
+            link.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener(
+    "scroll",
+    updateActiveNav,
+    { passive: true }
+);
+
+window.addEventListener(
+    "load",
+    updateActiveNav
+);
+
+
+/* =========================================================
+   PROJECT PLACEHOLDER
+========================================================= */
+
+document
+    .querySelectorAll('.project-btn[href="#"]')
+    .forEach(button => {
+
+        button.addEventListener("click", event => {
+
+            event.preventDefault();
+
+            alert(
+                "Project link will be added soon."
+            );
+        });
+    });
+
+
+/* =========================================================
+   CONSOLE
+========================================================= */
+
+console.log(
+    "🚀 Alok Kumar Portfolio — Step 15 loaded successfully!"
+);
