@@ -1,5 +1,5 @@
 /* =========================================================
-   ALOK KUMAR PORTFOLIO — STEP 15
+   ALOK KUMAR PORTFOLIO JAVASCRIPT
 ========================================================= */
 
 
@@ -7,27 +7,31 @@
    THEME
 ========================================================= */
 
-const themeToggle =
-    document.getElementById("theme-toggle");
+const themeToggle = document.getElementById("theme-toggle");
 
-const savedTheme =
-    localStorage.getItem("theme");
+const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "dark") {
+if (savedTheme === "light") {
+    document.body.classList.remove("dark");
+} else {
     document.body.classList.add("dark");
 }
+
 
 function updateThemeIcon() {
 
     if (!themeToggle) return;
 
-    const isDark =
-        document.body.classList.contains("dark") ||
-        document.body.classList.contains("dark-mode");
+    if (document.body.classList.contains("dark")) {
 
-    themeToggle.innerHTML = isDark
-        ? '<i class="fa-solid fa-moon"></i>'
-        : '<i class="fa-solid fa-sun"></i>';
+        themeToggle.innerHTML =
+            '<i class="fa-solid fa-moon"></i>';
+
+    } else {
+
+        themeToggle.innerHTML =
+            '<i class="fa-solid fa-sun"></i>';
+    }
 }
 
 updateThemeIcon();
@@ -62,6 +66,7 @@ const menuToggle =
 const navMenu =
     document.getElementById("nav-menu");
 
+
 if (menuToggle && navMenu) {
 
     menuToggle.addEventListener("click", (event) => {
@@ -70,10 +75,24 @@ if (menuToggle && navMenu) {
 
         navMenu.classList.toggle("active");
 
-        menuToggle.classList.toggle("active");
+        const icon =
+            menuToggle.querySelector("i");
 
         const isOpen =
             navMenu.classList.contains("active");
+
+        if (icon) {
+
+            icon.classList.toggle(
+                "fa-bars",
+                !isOpen
+            );
+
+            icon.classList.toggle(
+                "fa-xmark",
+                isOpen
+            );
+        }
 
         menuToggle.setAttribute(
             "aria-expanded",
@@ -82,29 +101,34 @@ if (menuToggle && navMenu) {
     });
 
 
-    /* Close after clicking navigation */
+    /* Close after clicking link */
 
-    navMenu
-        .querySelectorAll("a")
-        .forEach(link => {
+    navMenu.querySelectorAll("a").forEach(link => {
 
-            link.addEventListener("click", () => {
+        link.addEventListener("click", () => {
 
-                navMenu.classList.remove("active");
+            navMenu.classList.remove("active");
 
-                menuToggle.classList.remove("active");
+            const icon =
+                menuToggle.querySelector("i");
 
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-            });
+            if (icon) {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
         });
+    });
 
 
     /* Close outside */
 
-    document.addEventListener("click", (event) => {
+    document.addEventListener("click", event => {
 
         if (
             !navMenu.contains(event.target) &&
@@ -113,7 +137,14 @@ if (menuToggle && navMenu) {
 
             navMenu.classList.remove("active");
 
-            menuToggle.classList.remove("active");
+            const icon =
+                menuToggle.querySelector("i");
+
+            if (icon) {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+            }
 
             menuToggle.setAttribute(
                 "aria-expanded",
@@ -131,22 +162,27 @@ if (menuToggle && navMenu) {
 const revealElements =
     document.querySelectorAll(".reveal");
 
+
 function revealOnScroll() {
 
-    const trigger =
-        window.innerHeight - 80;
+    const windowHeight =
+        window.innerHeight;
 
     revealElements.forEach(element => {
 
-        const top =
+        const elementTop =
             element.getBoundingClientRect().top;
 
-        if (top < trigger) {
+        if (
+            elementTop <
+            windowHeight - 80
+        ) {
 
             element.classList.add("active");
         }
     });
 }
+
 
 window.addEventListener(
     "scroll",
@@ -168,7 +204,9 @@ const sections =
     document.querySelectorAll("section[id]");
 
 const navLinks =
-    document.querySelectorAll("#nav-menu a");
+    document.querySelectorAll(
+        "#nav-menu a, .nav-menu a"
+    );
 
 
 function updateActiveNav() {
@@ -177,15 +215,15 @@ function updateActiveNav() {
 
     sections.forEach(section => {
 
-        const top =
-            section.offsetTop - 180;
+        const sectionTop =
+            section.offsetTop - 160;
 
-        const bottom =
-            top + section.offsetHeight;
+        const sectionBottom =
+            sectionTop + section.offsetHeight;
 
         if (
-            window.scrollY >= top &&
-            window.scrollY < bottom
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionBottom
         ) {
 
             current =
@@ -207,6 +245,7 @@ function updateActiveNav() {
         }
     });
 }
+
 
 window.addEventListener(
     "scroll",
@@ -244,5 +283,5 @@ document
 ========================================================= */
 
 console.log(
-    "🚀 Alok Kumar Portfolio — Step 15 loaded successfully!"
+    "🚀 Alok Kumar Portfolio loaded successfully!"
 );
