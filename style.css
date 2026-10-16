@@ -2423,3 +2423,305 @@ body.light-mode footer {
     }
 
 }
+/* ==========================================
+   PREMIUM CONTACT FORM — ALOK KUMAR PORTFOLIO
+========================================== */
+
+.contact-form-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 760px;
+    margin: 45px auto 30px;
+    padding: 38px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        rgba(20, 28, 55, 0.96),
+        rgba(10, 15, 35, 0.96)
+    );
+
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: 26px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.28),
+        0 0 35px rgba(37, 99, 235, 0.08);
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                transform 0.3s ease;
+}
+
+.contact-form-wrapper:hover {
+    border-color: rgba(139, 92, 246, 0.65);
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(139, 92, 246, 0.12);
+}
+
+.contact-form-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -80px;
+
+    width: 220px;
+    height: 220px;
+
+    background: rgba(37, 99, 235, 0.12);
+    filter: blur(75px);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.contact-form-wrapper h3 {
+    position: relative;
+    margin-bottom: 8px;
+
+    font-size: clamp(24px, 4vw, 32px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+
+    color: #f8fafc;
+}
+
+.contact-form-description {
+    position: relative;
+    margin-bottom: 30px;
+
+    color: #a5b4cf;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* FORM LAYOUT */
+
+.contact-form-wrapper form {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.contact-form-wrapper .bot-field {
+    display: none !important;
+}
+
+.contact-form-wrapper .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.contact-form-wrapper .form-group label {
+    color: #e2e8f0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+/* INPUTS AND TEXTAREA */
+
+.contact-form-wrapper .form-group input,
+.contact-form-wrapper .form-group textarea {
+    display: block;
+    width: 100%;
+
+    padding: 15px 17px;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: #f8fafc;
+    background: rgba(7, 13, 32, 0.75);
+
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-form-wrapper .form-group input {
+    min-height: 53px;
+}
+
+.contact-form-wrapper .form-group textarea {
+    min-height: 155px;
+    resize: vertical;
+}
+
+.contact-form-wrapper .form-group input::placeholder,
+.contact-form-wrapper .form-group textarea::placeholder {
+    color: #71809e;
+    opacity: 1;
+}
+
+.contact-form-wrapper .form-group input:hover,
+.contact-form-wrapper .form-group textarea:hover {
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.contact-form-wrapper .form-group input:focus,
+.contact-form-wrapper .form-group textarea:focus {
+    background: rgba(10, 18, 42, 0.98);
+
+    border-color: #818cf8;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.13),
+        0 8px 24px rgba(37, 99, 235, 0.08);
+}
+
+/* SEND BUTTON */
+
+.contact-form-wrapper button[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    width: 100%;
+    min-height: 55px;
+
+    margin-top: 5px;
+    padding: 15px 24px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+
+    color: #ffffff;
+
+    background: linear-gradient(
+        110deg,
+        #2563eb,
+        #7c3aed,
+        #a855f7
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 13px;
+
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+.contact-form-wrapper button[type="submit"]:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.12);
+
+    box-shadow:
+        0 15px 32px rgba(79, 70, 229, 0.38);
+}
+
+.contact-form-wrapper button[type="submit"]:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.contact-form-wrapper button[type="submit"]:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 4px;
+}
+
+/* LIGHT MODE SUPPORT */
+
+body.light-mode .contact-form-wrapper {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.98),
+        rgba(243, 246, 255, 0.98)
+    );
+
+    border-color: rgba(99, 102, 241, 0.25);
+
+    box-shadow: 0 20px 55px rgba(39, 55, 100, 0.10);
+}
+
+body.light-mode .contact-form-wrapper h3 {
+    color: #172033;
+}
+
+body.light-mode .contact-form-description {
+    color: #647089;
+}
+
+body.light-mode .contact-form-wrapper .form-group label {
+    color: #27334b;
+}
+
+body.light-mode .contact-form-wrapper .form-group input,
+body.light-mode .contact-form-wrapper .form-group textarea {
+    color: #172033;
+    background: #ffffff;
+    border-color: #d8deed;
+}
+
+body.light-mode .contact-form-wrapper .form-group input::placeholder,
+body.light-mode .contact-form-wrapper .form-group textarea::placeholder {
+    color: #7c879c;
+}
+
+body.light-mode .contact-form-wrapper .form-group input:focus,
+body.light-mode .contact-form-wrapper .form-group textarea:focus {
+    background: #ffffff;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        margin-top: 30px;
+        padding: 25px 20px;
+        border-radius: 20px;
+    }
+
+    .contact-form-wrapper form {
+        gap: 18px;
+    }
+
+    .contact-form-wrapper .form-group input {
+        min-height: 50px;
+    }
+
+    .contact-form-wrapper .form-group input,
+    .contact-form-wrapper .form-group textarea {
+        padding: 13px 14px;
+        font-size: 14px;
+    }
+
+    .contact-form-wrapper .form-group textarea {
+        min-height: 135px;
+    }
+
+    .contact-form-wrapper button[type="submit"] {
+        min-height: 52px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-form-wrapper,
+    .contact-form-wrapper .form-group input,
+    .contact-form-wrapper .form-group textarea,
+    .contact-form-wrapper button[type="submit"] {
+        transition: none;
+    }
+}
